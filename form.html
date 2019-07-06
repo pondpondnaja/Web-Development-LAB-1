@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Form</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.css" media="screen">
+  <link rel="stylesheet" href="assets/css/style.css" media="screen">
+</head>
+
+<body>
+  <!-- NAV SECTION -->
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">MY PROFILE</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+        <li class="nav-item active"><a class="nav-link" href="form.html">FORM</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- END NAV SECTION -->
+  <header>
+    <center>
+      <h1 style="margin:20px 0 20px 0;">SUPPORT ME</h1>
+      <form id="myForm" method="post">
+        <div class="col-md-6 col-sm-12">
+          <div class="row">
+            <div class="col-md-6 col-sm-6">
+              <div class="form-group">
+                <input type="text" class="form-control" required="required" placeholder="Name" name="name">
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="form-group">
+                <input type="text" class="form-control" required="required" placeholder="Email address" name="email">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-sm-6 d-flex align-items-center d-flex justify-content-center">
+              <div class="form-check-inline form-group">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="male">Male
+                </label>
+              </div>
+              <div class="form-check-inline form-group">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="female">Female
+                </label>
+              </div>
+              <div class="form-check-inline form-group">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="no">None
+                </label>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <div class="form-group">
+                <select class="form-control" id="ageselect" name="age">
+                  <option selected disabled>Age</option>
+                  <script type="text/javascript">
+                    for (var i = 1; i <= 100; i++) {
+                      var select = document.getElementById("ageselect");
+                      var option = document.createElement("OPTION");
+                      select.options.add(option);
+                      option.text = i;
+                      option.value = i;
+                    }
+                  </script>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-sm-12 align-self-center py-2">
+              <div class="form-group text-right">
+                <label for="">Payment Method :</label>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-12">
+              <div class="form-group">
+                <select class="form-control" name="payment">
+                  <option selected disabled>Choose Method</option>
+                  <option value="1">Paypal</option>
+                  <option value="2">M@STER Card</option>
+                  <option value="3">Visa Crad</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 col-sm-12">
+              <div class="form-group">
+                <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Message"></textarea>
+              </div>
+              <div class="form-group">
+                <button name="button" type="submit" class="btn btn-primary">SUBMIT</button>
+                <input type="button" onclick="myFunction()" value="RESET FORM" class="btn btn-primary">
+                <script type="text/javascript">
+                  function myFunction() {
+                    document.getElementById("myForm").reset();
+                  }
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </center>
+  </header>
+  <!-- Footer -->
+  <footer>
+    <div id="footer" class="page-footer font-small blue py-3">
+      <div class="container">
+        <div class="row ">
+          <a href="index.html" class="text-right">Web Development LAB 2</a>
+          <a style="margin-left:5px">| 2019 All Right Reserved</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer -->
+</body>
+
+</html>
